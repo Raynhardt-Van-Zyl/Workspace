@@ -1,0 +1,22 @@
+<launch>
+
+    <remap from="robot_description" to="example_description" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find example_gazebo)/worlds/empty.world"/>
+        <arg name="paused" value="true"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+        <remap from="tf" to="gazebo_tf"/>
+    </include>
+
+    <param name="example_description" textfile="$(find example_description)/urdf/example.urdf" />
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find example_description)/urdf/rover.urdf -urdf -model rover -z 1.1" />
+
+    <!-- <include file="$(find example_control)/launch/example_control.launch"/> -->
+
+    <!-- <node name="simp_hexa_walker" pkg="example_gazebo" type="walker.py" /> -->
+
+</launch>

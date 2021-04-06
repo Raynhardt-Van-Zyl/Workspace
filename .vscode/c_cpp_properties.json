@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/raynhardt/Code/Workspace/src/test/include/**",
+        "/home/raynhardt/code/Workspace/src/stereo-visual-slam/**",
+        "/home/raynhardt/code/Workspace/src/landmarks/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+    }
+  ],
+  "version": 4
+}
